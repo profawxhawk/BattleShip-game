@@ -88,4 +88,10 @@ class Controller():
         self.battleship.display_grid()
 
     def start_game_handler(self):
-        pass
+        gameInitCheck = self.check_if_game_initialized()
+        if not gameInitCheck:
+            return
+            
+        print("Starting game")
+        self.battleship.start_game()
+        
